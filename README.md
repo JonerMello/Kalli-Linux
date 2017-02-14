@@ -1,38 +1,39 @@
-# README #
+# README #  
 
-Os testes serão executatos na Plataforma Linux, (Kali Linux 2.0).
+Os testes serão executatos na Plataforma Linux, (Kali Linux 2.0).  
 
 
-### Ferramentas ###
+### Ferramentas ###  
 
- msfconsole
- terminal com privilegio root
- armitage
- maltego
- metasploit
- arpspoof
- SSLSTRIP
+ msfconsole  
+ terminal com privilegio root  
+ armitage  
+ maltego  
+ metasploit  
+ arpspoof  
+ SSLSTRIP  
+ Google Hacking  
  
 
 
-### Tecnicas ###
+### Tecnicas ###  
 
-MITM--MAN-IN-THE-MIDDLE (ou homem no meio).
-Sniffing
-Spoof
-Engenharia Socia.(A melhor :p).
-Cross-site Request Forgery (XSRF).
-Envenenamento do cache DNS
-SQL Injection
-TCP_reverso.
-https_reverso.
+MITM--MAN-IN-THE-MIDDLE (ou homem no meio).  
+Sniffing  
+Spoof  
+Engenharia Socia.(A melhor :p).  
+Cross-site Request Forgery (XSRF).  
+Envenenamento do cache DNS  
+SQL Injection  
+TCP_reverso.  
+https_reverso.  
 
-### Diretrizes de contribuição ###
+### Diretrizes de contribuição ###  
 
- Escrevendo testes
- Revisão de código
- Outras diretrizes
+ Escrevendo testes  
+ Revisão de código  
+ Outras diretrizes  
  
-# # # Com Quem eu falo? ###
+# # # Com Quem eu falo? ###  
 
 * Proprietário ou administrador do Repo
