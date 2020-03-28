@@ -1,6 +1,6 @@
 # README #  
 
-Os testes serão executatos na Plataforma Linux, (Kali Linux 2.0).  
+Os testes serão executatos na Plataforma Linux,(Kali Linux 2.0).  
 
 
 ### Ferramentas ###  
