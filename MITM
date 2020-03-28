@@ -1,3 +1,4 @@
+#!/bin/bash
 /*ver se o ping ta chegando*/
 tcpdump -i eth0 host 192.168.0.126 
 
